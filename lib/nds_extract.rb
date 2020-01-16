@@ -19,5 +19,10 @@ end
 # { directorOne => allTheMoneyTheyMade, ... }
 def directors_totals(nds)
   result = {}
-  nil
+  director_index = 0
+  while director_index < nds[director_index].length do
+    director_name = nds[director_index][:name]
+    result[director_name] = gross_for_director(nds[director_index])
+  end
+  result
 end
